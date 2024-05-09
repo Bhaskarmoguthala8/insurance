@@ -1,0 +1,7 @@
+insurance=read.csv("insurance.csv")
+insurance$sex <- factor(insurance$sex, levels=c("male","female"), ordered=FALSE)
+insurance$smoker <- factor(insurance$smoker, levels=c("yes","no"), ordered=FALSE)
+insurance$region <- factor(insurance$region,levels=c("southwest","southeast","northwest","northeast"))
+View(insurance)
+str(insurance$smoker)
+str(insurance)
