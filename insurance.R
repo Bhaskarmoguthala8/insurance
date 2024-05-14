@@ -18,3 +18,15 @@ model=lm(charges~ age+sex+bmi+children+smoker+region)
 summary(model)
 
 charges~10818.63+ 256.86*age+339.19*bmi+475.50*children-23848.53*smokerno-174.97*regionnortheast
+model2=lm(charges~ age+bmi+children+smoker+region, data=insurance)
+model2
+summary(model2)
+charges~10886.66 + 338.66  * age + bmi * 338.66 +    474.57 * children - 23836.30 * smoker + 959.37 * regionnortheast
+AIC(model)
+AIC(model2)
+BIC(model)
+BIC(model2)
+paste("AIC for model1 ",(AIC(model)))
+paste("AIC for model2 ",(AIC(model2)))
+paste("BIC for model1 ",(BIC(model)))
+paste("BIC for model2 ",(BIC(model2)))
